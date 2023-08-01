@@ -289,7 +289,8 @@ ul {
 }
 
 .main-section{
-    background:url('../images/slide-background.png') rgba(0, 0, 0, 0.5);
+    background:linear-gradient(rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)), url('../images/slide-background.png');
+    background-size: cover;
 }
 .main-section .main-text{
     height: 600px;
