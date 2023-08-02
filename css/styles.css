@@ -136,7 +136,9 @@ a, button, img {
     width: 200px;
     height: 50px;
     border-radius: 4px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15); 
+
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
 }
 
 
@@ -567,4 +569,49 @@ a, button, img {
 .icons-footer .icon:focus{
     background-color: var(--link-active-color);
     color: var(--icon-color-background);
+}
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    padding: 16px;
+    background-color: #FFF;
+    width: 528px;
+    margin: 0 auto;
+    height: 581px;
+    position: relative;
+}
+
+.is-hidden {
+    visibility: hidden;
+}
+
+.close-btn{
+    background: red;
+    border: 1px solid red;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+}
+
+.close-btn:focus,
+.close-btn:hover {
+    background-color: red;
+}
+
+.request-btn{
+    
 }

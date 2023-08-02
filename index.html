@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/reset.css">
     <script src="https://unpkg.com/feather-icons"></script>
-    <script src="./js/modal.js"></script>
+    
 </head>
 <body>
          <div class="container">
@@ -39,7 +39,7 @@
         <section class="main-section">
             <div class="main-text">
             <h1>EFFECTIVE SOLUTIONS FOR YOUR BUSINESS</h1>
-            <button data-modal-open class="button" type="button">Request our service</button>
+            <button data-modal-open class="button request-btn" type="button">Request our service</button>
             </div>
         </section>
 
@@ -290,9 +290,9 @@
 
 <!--Modal-->
 
-<div class="modal is-open" data-modal>
-    <div class="modal-conte">
-        <button class="close-btn" data-modal-close>&times;</button>
+<div class="modal is-hidden" data-modal>
+    <div class="modal-content">
+      <button class="close-btn" data-modal-close>&times;</button>
         Conținutul modalului
     </div>
 </div>
@@ -300,6 +300,6 @@
     <script>
         feather.replace()
       </script>
-    
+    <script src="js/modal.js"></script>
 </body>
 </html>
