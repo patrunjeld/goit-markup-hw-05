@@ -243,7 +243,7 @@ a, button, img {
     letter-spacing: 0.42px;
 }
 
-.section-buttons ul, button{
+.section-buttons .portofolio-btn{
     border-radius: 4px;
     background:var(--background-buttons);
     color: #212121;
@@ -255,7 +255,7 @@ a, button, img {
     line-height: 26px;
     letter-spacing: 0.48px;
 }
-.section-buttons ul, button:hover{
+.section-buttons .portofolio-btn:hover{
     background-color:var(--link-active-color);
     color:var(--heading-color);
     border-radius: 4px;
@@ -578,9 +578,12 @@ a, button, img {
     left: 0;
     width: 100vw;
     height: 100vh;
+    background: rgb(0, 0, 0);
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform var(--transition);
+    opacity: 0.9;
 }
 
 .modal-content {
@@ -594,24 +597,96 @@ a, button, img {
 
 .is-hidden {
     visibility: hidden;
+    transform: scale(1.2);
 }
 
 .close-btn{
-    background: red;
-    border: 1px solid red;
-    color: white;
+    background-color: white;
+    border: 3px solid rgba(0, 0, 0, 0.10);
+    color: black;
     cursor: pointer;
     outline: none;
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     right: 16px;
     top: 16px;
-}
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: background-color var(--transition);
+
+  }
 
 .close-btn:focus,
 .close-btn:hover {
-    background-color: red;
+    background-color: rgb(197, 197, 197);
 }
 
 .request-btn{
     
+}
+
+.img-section{
+    position: relative;
+}
+
+
+
+.overlay-text{
+    background-color: rgba(47, 48, 58, 0.80);
+    position: absolute;
+    bottom: 0;
+    width: 370px;
+    height: 70px;
+    color: #FFF;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.card-service {
+    position: relative;
+}
+
+.card-service .hover-container-text{
+    position: absolute;
+    bottom: 110px;
+    color: #FFF;
+    background-color:rgba(33, 150, 243, 0.90);
+    width: 370px;
+    height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: .5s ease;
+}
+
+.card-service:hover .hover-container-text,
+.card-service:focus .hover-container-text {
+    height: 294px;
+    /*visibility: visible;*/
+}
+
+.card-service p{
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.54px;
+    width: 322px;
+    position: relative;
 }
