@@ -99,7 +99,11 @@ a, button, img {
     color: var(--link-active-color);
 }
 
-.global-header .main-navigation a{
+.navigation-elements{
+    position: relative;
+}
+
+.global-header .main-navigation ul a{
     color:var(--link-color);
     font-family: Roboto;
     font-size: 14px;
@@ -110,20 +114,43 @@ a, button, img {
     text-decoration: none;
 }
 
-.global-header .main-navigation a.active{
+.global-header .main-navigation ul a.underline-studio{
     color:var(--link-active-color);
 }
 
-.global-header .main-navigation a.active::after{
+.global-header .main-navigation ul a.underline-studio::after{
     content: "";
     position: absolute;
-    bottom: 851px;
-    left: 595px;
     width: 42px;
     height: 4px;
     border-radius: 10px;
     background-color: var(--link-active-color);
+    bottom: 0;
+    left: 0;
+    flex-shrink: 0;
+    top: 48px;
 }
+
+.global-header .main-navigation ul a.underline-portofolio{
+    color:var(--link-active-color);
+}
+
+.global-header .main-navigation ul a.underline-portofolio::after{
+    content: "";
+    position: absolute;
+    width: 58px;
+    height: 4px;
+    border-radius: 10px;
+    background-color: var(--link-active-color);
+    bottom: 0;
+    left: 0;
+    flex-shrink: 0;
+    top: 48px;
+    left: 98px;
+}
+
+
+
 
 .button {
     color:var(--heading-color);
